@@ -1,58 +1,60 @@
 @extends('layouts.base')
 
 
-@section('contentx')
+@section('content')
   {{-- banner section --}}
-  <section class="mt-6">
+  <section class="px-4 mt-6">
     <div>
-      <img class="rounded-2xl" src="{{ asset('img/0.png') }}" alt="">
+      <img class="w-full h-10 lg:h-20 rounded-2xl" src="{{ asset('img/0.png') }}" alt="">
     </div>
     <div class="mt-4 flex">
-      <div class="ml-4 w-8/12 flex flex-1">
-        <img class="rounded-2xl" src="{{ asset('img/2.png') }}" alt="">
+      <div class="lg:ml-4 w-full lg:w-8/12 flex flex-1">
+        <img class="block w-full rounded-2xl" src="{{ asset('img/2.png') }}" alt="">
       </div>
-      <div class="w-4/12 flex flex-col">
+      <div class="hidden lg:flex flex-col w-4/12">
         <img class="mb-4 rounded-2xl" src="{{ asset('img/1.png') }}" alt="">
         <img class="rounded-2xl" src="{{ asset('img/1.png') }}" alt="">
       </div>
     </div>
   </section>
 
+
   {{-- category section --}}
-  <section class="mt-10 mb-20 flex justify-between">
-    <div class="flex flex-col items-center">
+  <section class="mt-10 flex justify-between flex-wrap">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">لوستر مدرن</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">آباژور رومیزی</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">مبلمان تختخواب‌شو</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">مبل تک نفره</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">میز</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">چراغ آویز</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">ساعت دیواری</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">لوستر چوبی</span>
     </div>
   </section>
+
 
   {{-- favorite products --}}
   <section class="rounded-lg bg-white shadow w-full py-4 px-6">
@@ -63,373 +65,296 @@
     </div>
 
     {{-- products section --}}
-    <div class="flex justify-between items-center pt-2 pb-8">
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+    <div class="flex justify-between items-center pt-2 pb-8 text-sm xl:text-base flex-wrap">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
+      </div>
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
+        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
+        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
     </div>
   </section>
+
 
   {{-- banner section --}}
   <section class="flex justify-between my-6">
-    <div class="ml-4">
-      <img class="rounded-xl w-full" src="{{ asset('img/4.jpg') }}" alt="">
-    </div>
-    <div>
-      <img class="rounded-xl w-full" src="{{ asset('img/4.jpg') }}" alt="">
+    <div class="flex flex-col md:flex-row">
+      <img class="block rounded-xl w-full md:w-1/2 md:pl-1" src="{{ asset('img/4.jpg') }}" alt="">
+      <img class="block rounded-xl w-full md:w-1/2 md:pr-1 mt-4 md:mt-0" src="{{ asset('img/4.jpg') }}" alt="">
     </div>
   </section>
 
-  {{-- favorite products --}}
+
+  {{-- luster products --}}
   <section class="rounded-lg bg-white shadow w-full py-4 px-6">
     {{-- header --}}
     <div class="flex justify-between font-bold text-lg border-b mb-4">
-      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">لوستر برنزی طرح فرشته</span>
+      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">لوستر برنزی طرح فرشته
+      </span>
       <a href="#" class="py-4 text-gray-500 hover:text-green-800">مشاهده همه</a>
     </div>
 
     {{-- products section --}}
-    <div class="flex justify-between items-center pt-2 pb-8">
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+    <div class="flex justify-between items-center pt-2 pb-8 text-sm xl:text-base flex-wrap">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
+      </div>
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
+        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
+        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
     </div>
-  </section>
-
-  {{-- banner section --}}
-  <section class="flex justify-between my-6">
-    <div class="ml-4">
-      <img class="rounded-xl w-full" src="{{ asset('img/4.jpg') }}" alt="">
-    </div>
-    <div>
-      <img class="rounded-xl w-full" src="{{ asset('img/4.jpg') }}" alt="">
-    </div>
-  </section>
+  </section>  
   
-  {{-- favorite products --}}
+
+  {{-- banner section --}}
+  <section class="flex justify-between my-6">
+    <div class="flex flex-col md:flex-row">
+      <img class="block rounded-xl w-full md:w-1/2 md:pl-1" src="{{ asset('img/4.jpg') }}" alt="">
+      <img class="block rounded-xl w-full md:w-1/2 md:pr-1 mt-4 md:mt-0" src="{{ asset('img/4.jpg') }}" alt="">
+    </div>
+  </section>
+
+  {{-- cards for bellow products --}}
+  <section class="w-full mt-6">
+    <div class="flex flex-wrap">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pl-1" src="{{ asset('img/5.jpg') }}" alt="">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pr-1 md:pl-1" src="{{ asset('img/5.jpg') }}" alt="">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pl-1 md:pr-1" src="{{ asset('img/5.jpg') }}" alt="">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pr-1" src="{{ asset('img/5.jpg') }}" alt="">
+    </div>
+  </section>
+
+  {{-- Lampshade products --}}
   <section class="rounded-lg bg-white shadow w-full py-4 px-6">
     {{-- header --}}
     <div class="flex justify-between font-bold text-lg border-b mb-4">
-      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">آباژور ایستاده و کنارسالنی</span>
+      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">آباژور ایستاده و کنارسالنی
+
+      </span>
       <a href="#" class="py-4 text-gray-500 hover:text-green-800">مشاهده همه</a>
     </div>
 
     {{-- products section --}}
-    <div class="flex justify-between items-center pt-2 pb-8">
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+    <div class="flex justify-between items-center pt-2 pb-8 text-sm xl:text-base flex-wrap">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
+      </div>
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
+        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
+        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
     </div>
   </section>
+
 
   {{-- category section --}}
-  <section class="mt-10 mb-20 flex justify-between">
-    <div class="flex flex-col items-center">
+  <section class="mt-10 flex justify-between flex-wrap">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">لوستر مدرن</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">آباژور رومیزی</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">مبلمان تختخواب‌شو</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">مبل تک نفره</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">میز</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">چراغ آویز</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">ساعت دیواری</span>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
       <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
       <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">لوستر چوبی</span>
     </div>
   </section>
 
-  {{-- favorite products --}}
+
+  {{-- clock products --}}
   <section class="rounded-lg bg-white shadow w-full py-4 px-6">
     {{-- header --}}
     <div class="flex justify-between font-bold text-lg border-b mb-4">
-      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">ساعت دیواری</span>
+      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">ساعت دیواری
+
+      </span>
       <a href="#" class="py-4 text-gray-500 hover:text-green-800">مشاهده همه</a>
     </div>
 
     {{-- products section --}}
-    <div class="flex justify-between items-center pt-2 pb-8">
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+    <div class="flex justify-between items-center pt-2 pb-8 text-sm xl:text-base flex-wrap">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
+      </div>
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
+        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
+        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
     </div>
   </section>
 
-  {{-- cards --}}
+
+  {{-- cards for bellow products --}}
   <section class="w-full mt-6">
-    <div class="flex">
-      <div class="w-1/4 ml-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 ml-2 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 ml-2 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
+    <div class="flex flex-wrap">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pl-1" src="{{ asset('img/5.jpg') }}" alt="">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pr-1 md:pl-1" src="{{ asset('img/5.jpg') }}" alt="">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pl-1 md:pr-1" src="{{ asset('img/5.jpg') }}" alt="">
+      <img class="block w-1/2 md:w-1/4 mb-4 rounded-xl h-full pr-1" src="{{ asset('img/5.jpg') }}" alt="">
     </div>
   </section>
+  
 
-  <section class="rounded-lg bg-white shadow w-full py-4 px-6 mt-6">
+  {{-- wood luster products --}}
+  <section class="rounded-lg bg-white shadow w-full py-4 px-6">
     {{-- header --}}
     <div class="flex justify-between font-bold text-lg border-b mb-4">
-      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">آباژور ایستاده و کنارسالنی</span>
+      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">محبوب‌ترین لوسترهای چوبی
+
+      </span>
       <a href="#" class="py-4 text-gray-500 hover:text-green-800">مشاهده همه</a>
     </div>
 
     {{-- products section --}}
-    <div class="flex justify-between items-center pt-2 pb-8">
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+    <div class="flex justify-between items-center pt-2 pb-8 text-sm xl:text-base flex-wrap">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
         <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
         <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
+      </div>
+      <div class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
+        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
+        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
+        <div class="text-left ml-2 text-gray-500 mt-6">1,250,000 تومان</div>
       </div>
     </div>
   </section>
 
-  {{-- cards --}}
-  <section class="w-full mt-6">
-    <div class="flex">
-      <div class="w-1/4 ml-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 ml-2 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 ml-2 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-    </div>
-  </section>
-
-  <section class="rounded-lg bg-white shadow w-full py-4 px-6 mt-6">
-    {{-- header --}}
-    <div class="flex justify-between font-bold text-lg border-b mb-4">
-      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">محبوب‌ترین لوسترهای چوبی</span>
-      <a href="#" class="py-4 text-gray-500 hover:text-green-800">مشاهده همه</a>
-    </div>
-
-    {{-- products section --}}
-    <div class="flex justify-between items-center pt-2 pb-8">
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-    </div>
-  </section>
-
-  {{-- cards --}}
-  <section class="w-full mt-6">
-    <div class="flex">
-      <div class="w-1/4 ml-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 ml-2 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 ml-2 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-      <div class="w-1/4 mr-2">
-        <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/5.jpg') }}" alt="">
-      </div>
-    </div>
-  </section>
-
-  <section class="rounded-lg bg-white shadow w-full py-4 px-6 mt-6">
-    {{-- header --}}
-    <div class="flex justify-between font-bold text-lg border-b mb-4">
-      <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">مبلمان پر تخفیف</span>
-      <a href="#" class="py-4 text-gray-500 hover:text-green-800">مشاهده همه</a>
-    </div>
-
-    {{-- products section --}}
-    <div class="flex justify-between items-center pt-2 pb-8">
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-      <div class="w-56 text-center hover:shadow-xl px-4 py-4">
-        <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="text-ceter text-gray-500 mx-auto">لوستر ۷ شعله چشمه نور کد H2084 - ۲۸۰ گرم</span>
-        <div class="text-left text-gray-500 mt-6">1,250,000</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="w-full mt-6">
-    <div class="">
-      <img class="mb-4 rounded-xl h-full w-full mx-auto" src="{{ asset('img/6.jpg') }}" alt="">
-    </div>
-  </section>
 @endsection

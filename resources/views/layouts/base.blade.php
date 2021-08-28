@@ -39,10 +39,10 @@
           {{-- menu items --}}
           <div id="menu" class="hidden lg:hidden px-2 pt-2 pb-5">
             <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 md:mt-0 hover:bg-gray-200">خانه</a>
-            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">درباره ما</a>
             <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">محصولات</a>
             <a href="#" class="md:hidden tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">سبد خرید</a>
-            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">تماس</a>
+            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">تماس با ما</a>
+            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">درباره ما</a>
             @if ($user = Auth::user())
               <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">داشبورد</a>
               <form action="#" method="POST">
@@ -95,16 +95,21 @@
             <a href="#">آباژور</a>
           </li>
           <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
+            <a href="#">ساعت دیواری</a>
+          </li>
+          <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
             <a href="#">درباره ما</a>
+          </li>
+          <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
+            <a href="#">تماس با ما</a>
           </li>
         </ul>
       </div>
     </div>
-
   </header>
 
   {{-- main content --}}
-  <main class="px-12 pb-16">
+  <main class="max-w-7xl mx-auto px-4 pb-16">
     @yield('content')
   </main>
 
@@ -215,7 +220,7 @@
             </ul>
           </div>
           <div class="w-full mt-4 md:mt-0 md:w-1/3">
-            <h2 class="font-bold tracking-widest mt-5 md:mt-0">خدمات مشتریان</h2>
+            <h2 class="font-bold tracking-widest pt-3 md:pt-0 mt-2 md:mt-0 border-t md:border-t-0 border-gray-300">خدمات مشتریان</h2>
             <ul class="mt-2 lg:mt-4">
               <li>
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">سوالات متداول</a>
@@ -232,7 +237,7 @@
             </ul>
           </div>
           <div class="w-full mt-4 md:mt-0 md:w-1/3">
-            <h2 class="font-bold tracking-widest mt-5 md:mt-0">با لوسترشاپ</h2>
+            <h2 class="font-bold tracking-widest pt-3 mt-2 md:mt-0 border-t md:border-t-0 border-gray-300">با لوسترشاپ</h2>
             <ul class="mt-2 lg:mt-4">
               <li>
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">دکورمگ</a>
@@ -327,7 +332,7 @@
     <div class="bg-gray-300 py-6 px-12 font-thin">
       <div class="flex flex-col lg:flex-row my-6">
         <div class="w-full lg:w-1/2 xl:w-2/3 leading-8 text-justify lg:pl-6 mb-6">
-          <p class="overflow-x-auto">لوسترشاپ به‌عنوان يکی از به‌روزترين و جامع‌ترين فروشگاه‌های آنلاين لوستر، فعاليت خود را با هدف عرضه کالای ايرانی آغاز نموده است. فروش تخصصی لوسترشاپ در زمينه‌ٔ لوستر، لوازم دکوری و آباژور است. لوسترشاپ با گرد هم آوردن سبد خريدی کامل از بهترين محصولات ايرانی و حمايت از توليد ملی، باعث کاهش هزينهٔ مشتريان خود در امر خريد لوستر شده است. مشتريان می‌توانند به‌جای خريد فيزيکی در بازار و صرف وقت زياد، به‌راحتی در منزل ويترين و محصولات موجود در لوسترشاپ را با مشخصات کامل ببينند، مقايسه کنند و در انتها با اطمينان از شرايط ارسال و تضمين سلامت کالا خريد کنند و از خريد راحت و بی‌دغدغه خود لذت ببرند.</p>
+          <p class="text-sm lg:text-base">لوسترشاپ به‌عنوان يکی از بروزترين و جامع‌ترين فروشگاه‌های آنلاين لوستر، فعاليت خود را با هدف عرضه کالای ايرانی آغاز نموده است. فروش تخصصی لوسترشاپ در زمينه‌ٔ لوستر، لوازم دکوری و آباژور است. لوسترشاپ با گرد هم آوردن سبد خريدی کامل از بهترين محصولات ايرانی و حمايت از توليد ملی، باعث کاهش هزينهٔ مشتريان خود در امر خريد لوستر شده است. مشتريان می‌توانند به‌جای خريد فيزيکی در بازار و صرف وقت زياد، به‌راحتی در منزل ويترين و محصولات موجود در لوسترشاپ را با مشخصات کامل ببينند، مقايسه کنند و در انتها با اطمينان از شرايط ارسال و تضمين سلامت کالا خريد کنند و از خريد راحت و بی‌دغدغه خود لذت ببرند.</p>
         </div>
         
         <div class="flex flex-col sm:flex-row items-center mr-2 lg:mr-0 w-full lg:w-1/2 xl:w-1/3 justify-center space-y-6 md:space-y-0">
