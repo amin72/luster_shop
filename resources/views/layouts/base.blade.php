@@ -86,17 +86,17 @@
       <div class="hidden lg:block pt-8 w-full">
         <ul class="flex">
           <li class="mx-4 font-semibold text-gray-800 text-sm tracking-wide">
-            <a href="#">خانه</a>
+            <a href="{{ route('pages.index') }}">خانه</a>
           </li>
           <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
-            <a href="#">لوستر</a>
+            <a href="{{ route('products.index') }}">محصولات</a>
           </li>
-          <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
-            <a href="#">آباژور</a>
-          </li>
-          <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
-            <a href="#">ساعت دیواری</a>
-          </li>
+          {{-- list all parent categories --}}
+          @foreach (\App\Models\Category::whereNull('parent_id')->get() as $category)
+            <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
+              <a href="{{ route('products.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+            </li>
+          @endforeach
           <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
             <a href="#">درباره ما</a>
           </li>
@@ -109,7 +109,7 @@
   </header>
 
   {{-- main content --}}
-  <main class="max-w-7xl mx-auto px-4 pb-16">
+  <main class="mx-auto px-4 pb-16">
     @yield('content')
   </main>
 
