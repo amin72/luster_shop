@@ -26,21 +26,22 @@
     <section class="flex flex-wrap mx-auto"> 
       {{-- container --}}
       @foreach ($products as $product)
-        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mt-10 mb-16 px-6 py-6 border border-gray-100 shadow-sm hover:shadow-xl transition-shadow delay-50">
-          <a href="#">
-            <img class="h-96 w-full" src="{{ asset($product->small_image) }}" alt="">
-          </a>
+        <a
+          href="{{ route('products.show', $product->slug) }}"
+          class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mt-10 mb-16 px-6 py-6 border border-gray-100 shadow-sm hover:shadow-xl transition-shadow delay-50">
+          <img class="h-96 w-full" src="{{ asset($product->small_image) }}" alt="{{ $product->name }}">
           <div class="text-center mt-3">
-            <a
-              href="#"
-              class="block lg:text-xl text-gray-800 font-semibold lg:font-medium mt-6">{{ $product->name }}</a>
+            <span
+              class="block lg:text-xl text-gray-800 font-semibold lg:font-medium mt-6">
+              {{ $product->name }}
+            </span>
             <div class="text-gray-700 mt-2">
               <span class="change_price tracking-widest font-semibold">{{ $product->price }}</span>
               <span>تومان</span>
             </div>
             {{-- @include('partials.shop.add_to_cart', ['product' => $product]) --}}
           </div>
-        </div>
+        </a>
       @endforeach
     </section>
 
