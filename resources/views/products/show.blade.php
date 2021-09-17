@@ -29,7 +29,6 @@
         {{-- properties --}}
         <div class="flex flex-wrap justify-between mt-6 lg:mt-0">
           <div class="w-full md:w-1/2 xl:w-1/3 flex-shrink-0 mt-6">
-            <h2 class="font-bold">ویژگی های محصول</h2>
             <ul class="mt-3 text-sm space-y-2 text-gray-600 list-disc list-inside">
               <li>جنس لایه میانی : فوم</li>
               <li>جنس کلاف : استیل</li>
@@ -78,11 +77,11 @@
       <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold text-xl tracking-wide">محصولات مرتبط</span>
 
       <div class="flex flex-wrap mx-auto"> 
-        @foreach ($similar_products as $product)
+        @foreach ($product->similar_products() as $prod)
           <a
-            href="{{ route('products.show', $product->slug) }}"
+            href="{{ route('products.show', $prod->slug) }}"
             class="w-full md:w-1/3 lg:w-1/4 xl:w-1/6 mt-10 lg:mb-16 px-4 py-4 border border-gray-100 shadow-sm hover:shadow-xl transition-shadow delay-50">
-            <img class="h-60 w-full" src="{{ asset($product->small_image) }}" alt="{{ $product->name }}">
+            <img class="h-60 w-full" src="{{ asset($prod->small_image) }}" alt="{{ $prod->name }}">
             <div class="text-center mt-3">
               <span
                 class="block lg:text-xl text-gray-800 font-semibold lg:font-medium mt-6">

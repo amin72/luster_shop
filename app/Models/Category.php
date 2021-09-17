@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 
-    protected $fillable = ['name', 'slug', 'published', 'parent_id'];
+    protected $fillable = ['name', 'slug', 'published', 'menu_category_id'];
 
 
     public function products()

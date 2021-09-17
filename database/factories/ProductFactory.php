@@ -22,17 +22,17 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->word . ' ' . $this->faker->randomDigit . $this->faker->randomDigit;
+        $name = $this->faker->word . ' ' . $this->faker->randomDigit . "-" . $this->faker->randomDigit . $this->faker->randomDigit;
         $slug = \Str::slug($name, '-');
 
         return [
             'category_id' => function() {
-                return Category::where('id', '>', 3)->get()->random();
+                return Category::all()->random();
             },
             'name' => $name,
             'slug' => $slug,
             'description' => $this->faker->paragraph,
-            'price' => $this->faker->numberBetween(100000, 1000000),
+            'price' => $this->faker->numberBetween(100000, 10000000),
             'stock' => $this->faker->randomDigit,
             'published' => true,
             'image' => 'images/products/sample.jpg',

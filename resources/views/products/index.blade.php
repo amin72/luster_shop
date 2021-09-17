@@ -4,17 +4,28 @@
 @section('content')
   <div class="max-w-10xl 2xl:max-w-9xl mx-auto bg-white mt-6 py-2">
     {{-- sub categories --}}
-    @if ($sub_categories)
+    @if ($categories)
       <section class="mt-10 mx-auto px-8">
         <div class="flex flex-wrap items-center">
           <h2 class="ml-2 py-1 font-semibold">دسته بندی:</h2>
           <ul class="flex">
-          <li class="px-2 py-1 cursor-pointer text-sm md:text-base font-semibold bg-green-300 rounded-lg text-green-700 tracking-wide">
-            <a href="{{ route('products.index', ['category' => $category->slug]) }}">همه</a>
+          <li class="px-2 py-1 cursor-pointer text-sm md:text-base font-semibold tracking-wide
+          @if ($selected_category)
+          text-gray-500 hover:text-gray-700
+          @else
+          text-green-700 bg-green-300 rounded-lg
+          @endif
+          ">
+            <a href="{{ route('products.index', ['menu' => $menu->slug]) }}">همه</a>
           </li>
-          @foreach ($sub_categories as $sub_category)
-            <li class="px-2 py-1 cursor-pointer text-sm md:text-base font-semibold tracking-wide text-gray-500 hover:text-gray-700">
-              <a href="{{ route('products.index', ['category' => $category->slug, 'sub_category' => $sub_category->slug]) }}">{{ $sub_category->name }}</a>
+          @foreach ($categories as $category)
+            <li class="px-2 py-1 cursor-pointer text-sm md:text-base font-semibold tracking-wide
+            @if ($selected_category and $selected_category->slug == $category->slug)
+            text-green-700 bg-green-300 rounded-lg
+            @else
+            text-gray-500 hover:text-gray-700
+             @endif">
+              <a href="{{ route('products.index', ['menu' => $menu->slug, 'category' => $category->slug]) }}">{{ $category->name }}</a>
             </li>
           @endforeach
         </div>

@@ -92,9 +92,9 @@
             <a href="{{ route('products.index') }}">محصولات</a>
           </li>
           {{-- list all parent categories --}}
-          @foreach (\App\Models\Category::whereNull('parent_id')->get() as $category)
+          @foreach (\App\Models\MenuCategory::where('published', true)->get() as $menu)
             <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
-              <a href="{{ route('products.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+              <a href="{{ route('products.index', ['menu' => $menu->slug]) }}">{{ $menu->name }}</a>
             </li>
           @endforeach
           <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
