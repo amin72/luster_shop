@@ -21,7 +21,8 @@ class CreateProductsTable extends Migration
 
             $table->string('name', 60)->unique();
             $table->string('slug')->unique();
-            $table->string('description', 3000)->nullable();
+            $table->string('description', 250)->nullable();
+            $table->string('details', 3000)->nullable();
             $table->unsignedInteger('price');
             $table->unsignedSmallInteger('stock');
             $table->boolean('published')->default(false);
