@@ -103,4 +103,22 @@ class ProductsController extends Controller
     {
         //
     }
+
+
+    public function getPrice(Request $request, $slug) {
+        $product = Product::where('slug', $slug)->firstOrFail();
+        $attributes = $request->query('attributes');
+        // return $attributes;
+        $extra_price = 0;
+
+        foreach ($product->attributes->all() as $attribute) {
+            foreach ($attributes as $selected_attribute) {
+                if ($selected_attribute["id"] == $attribute->pivot->id) {
+                    $extra_price += $attribute->pivot->price;
+                }
+            }
+        }
+
+        return $product->price + $extra_price;
+    }
 }

@@ -10,3 +10,4 @@ Route::name('pages.')->group(function () {
 });
 
 Route::resource('products', ProductsController::class);
+Route::get('products/get-price/{slug}', [ProductsController::class, 'getPrice']);

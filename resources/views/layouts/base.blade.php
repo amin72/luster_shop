@@ -6,7 +6,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>@yield('title')</title>
 </head>
-<body class="font-yekan antialiased bg-gray-100 text-gray-500" dir="rtl">
+<body class="font-yekan antialiased bg-gray-100 text-gray-600" dir="rtl">
   {{-- header content --}}
   <header class="flex justify-between px-6 py-4 bg-white">
     <div class="flex flex-col justify-between w-full">
@@ -64,7 +64,7 @@
             <input
               type="text"
               placeholder="جستجو در محصولات ..."
-              class="text-sm block py-3 pl-12 pr-4 focus:outline-none rounded-lg bg-gray-200 w-full md:w-96">
+              class="text-sm block py-3 pl-12 pr-4 rounded-lg w-full md:w-96 text-gray-800 focus:outline-none">
               <div class="absolute left-0 px-3 lg:px-0 lg:mx-10">
                 @include('svg.magnifying-glass', ['class' => 'h-6 w-6 fill-current text-gray-500'])
               </div>

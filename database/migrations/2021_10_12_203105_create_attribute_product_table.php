@@ -23,6 +23,7 @@ class CreateAttributeProductTable extends Migration
             $table->foreign('attribute_id')->references('id')->on('attributes');
 
             $table->string('value')->nullable();
+            $table->integer('price')->default(0);
             $table->timestamps();
         });
     }

@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
         // \App\Models\Category::factory(5)->create();
         $this->call(MenuCategoryTableSeeder::class);
+        $this->call(AttributeTableSeeder::class);
         $this->call(CategoryTableSeeder::class);
         \App\Models\Product::factory(50)->create();
+        \App\Models\AttributeProduct::factory(500)->create();
     }
 }

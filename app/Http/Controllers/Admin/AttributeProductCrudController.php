@@ -46,6 +46,7 @@ class AttributeProductCrudController extends CrudController
         CRUD::column('product');
         CRUD::column('attribute');
         CRUD::column('value');
+        CRUD::column('price');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -75,6 +76,7 @@ class AttributeProductCrudController extends CrudController
             ->model(\App\Models\Attribute::class);
 
         CRUD::field('value');
+        CRUD::field('price')->type('number');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
@@ -100,5 +102,6 @@ class AttributeProductCrudController extends CrudController
         CRUD::column('product');
         CRUD::column('attribute');
         CRUD::column('value');
+        CRUD::field('price')->type('number');
     }
 }
