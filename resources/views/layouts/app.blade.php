@@ -54,8 +54,8 @@
               </form>
             @endif
             @if(Auth::guest())
-              <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">ورود</a>
-              <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">ثبت نام</a>
+              <a href="{{ route('login') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">ورود</a>
+              <a href="{{ route('register') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">ثبت نام</a>
             @endif
           </div>
   
@@ -74,9 +74,9 @@
         <div class="hidden lg:flex items-center flex-shrink-0">
           <div class="flex items-center ml-6">
             @include('svg.user', ['class' => 'h-5 w-5 fill-current text-gray-500 ml-2'])
-            <a href="#" class="font-semibold text-sm tracking-wide">ورود</a>
+            <a href="{{ route('login') }}" class="font-semibold text-sm tracking-wide">ورود</a>
             <span class="mx-2 text-gray-500">/</span>
-            <a href="#" class="font-semibold text-sm tracking-wide">ثبت نام</a>
+            <a href="{{ route('register') }}" class="font-semibold text-sm tracking-wide">ثبت نام</a>
           </div>
           @include('svg.shopping-card', ['class' => 'h-6 w-6 fill-current text-gray-500'])
         </div>
@@ -200,7 +200,7 @@
       <div class="flex flex-col lg:flex-row justify-between pt-6 pb-8 border-b border-gray-300">
         <div class="w-full lg:w-8/12 flex flex-col md:flex-row justify-between">
           <div class="w-full md:w-1/3">
-            <h2 class="font-bold tracking-widest">راهنمای خرید از لوسترشاپ</h2>
+            <h2 class="text-sm font-bold tracking-widest">راهنمای خرید از لوسترشاپ</h2>
             <ul class="mt-2 lg:mt-4">
               <li>
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">راهنمای خرید</a>
@@ -220,7 +220,7 @@
             </ul>
           </div>
           <div class="w-full mt-4 md:mt-0 md:w-1/3">
-            <h2 class="font-bold tracking-widest pt-3 md:pt-0 mt-2 md:mt-0 border-t md:border-t-0 border-gray-300">خدمات مشتریان</h2>
+            <h2 class="text-sm font-bold tracking-widest pt-3 md:pt-0 mt-2 md:mt-0 border-t md:border-t-0 border-gray-300">خدمات مشتریان</h2>
             <ul class="mt-2 lg:mt-4">
               <li>
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">سوالات متداول</a>
@@ -237,7 +237,7 @@
             </ul>
           </div>
           <div class="w-full mt-4 md:mt-0 md:w-1/3">
-            <h2 class="font-bold tracking-widest pt-3 mt-2 md:mt-0 border-t md:border-t-0 border-gray-300">با لوسترشاپ</h2>
+            <h2 class="text-sm font-bold tracking-widest pt-3 mt-2 md:mt-0 border-t md:border-t-0 border-gray-300">با لوسترشاپ</h2>
             <ul class="mt-2 lg:mt-4">
               <li>
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">دکورمگ</a>
@@ -265,7 +265,7 @@
           
           <div class="flex mt-4">
             <form action="" method="POST" class="flex">
-              <input type="text" class="px-4 py-2 rounded-r-lg focus:outline-none md:w-72 lg:w-64" placeholder="ایمیل">
+              <input type="text" class="px-4 py-2 rounded-r-lg focus:outline-none md:w-72 lg:w-64 border-0" placeholder="ایمیل">
               <button class="px-4 md:px-6 py-2 bg-green-600 text-sm text-white tracking-wide rounded-l-lg focus:outline-none hover:bg-green-500">ارسال</button>
             </form>
           </div>

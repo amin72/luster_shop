@@ -356,7 +356,7 @@ ul {
  */
 
 html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -563,7 +563,23 @@ video {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
-[type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
+
+      [type='text'],
+      [type='email'],
+      [type='url'],
+      [type='password'],
+      [type='number'],
+      [type='date'],
+      [type='datetime-local'],
+      [type='month'],
+      [type='search'],
+      [type='tel'],
+      [type='time'],
+      [type='week'],
+      [multiple],
+      textarea,
+      select
+     {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -577,7 +593,6 @@ video {
   padding-left: 0.75rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  --tw-shadow: 0 0 #0000;
 }
 
 [type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
@@ -589,7 +604,7 @@ video {
   --tw-ring-color: #2563eb;
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   border-color: #2563eb;
 }
 
@@ -603,7 +618,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
 }
 
-input::placeholder,textarea::placeholder {
+input::placeholder, textarea::placeholder {
   color: #6b7280;
   opacity: 1;
 }
@@ -636,7 +651,10 @@ select {
           color-adjust: unset;
 }
 
-[type='checkbox'],[type='radio'] {
+
+      [type='checkbox'],
+      [type='radio']
+     {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -657,7 +675,6 @@ select {
   background-color: #fff;
   border-color: #6b7280;
   border-width: 1px;
-  --tw-shadow: 0 0 #0000;
 }
 
 [type='checkbox'] {
@@ -668,7 +685,10 @@ select {
   border-radius: 100%;
 }
 
-[type='checkbox']:focus,[type='radio']:focus {
+
+      [type='checkbox']:focus,
+      [type='radio']:focus
+     {
   outline: 2px solid transparent;
   outline-offset: 2px;
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
@@ -677,10 +697,13 @@ select {
   --tw-ring-color: #2563eb;
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-[type='checkbox']:checked,[type='radio']:checked {
+
+      [type='checkbox']:checked,
+      [type='radio']:checked
+     {
   border-color: transparent;
   background-color: currentColor;
   background-size: 100% 100%;
@@ -696,7 +719,12 @@ select {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
 }
 
-[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus {
+
+      [type='checkbox']:checked:hover,
+      [type='checkbox']:checked:focus,
+      [type='radio']:checked:hover,
+      [type='radio']:checked:focus
+     {
   border-color: transparent;
   background-color: currentColor;
 }
@@ -710,7 +738,10 @@ select {
   background-repeat: no-repeat;
 }
 
-[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus {
+
+      [type='checkbox']:indeterminate:hover,
+      [type='checkbox']:indeterminate:focus
+     {
   border-color: transparent;
   background-color: currentColor;
 }
@@ -22526,7 +22557,7 @@ select {
 }
 
 .font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
@@ -28416,6 +28447,66 @@ select {
 }
 
 .focus\:opacity-100:focus {
+  opacity: 1;
+}
+
+.disabled\:opacity-0:disabled {
+  opacity: 0;
+}
+
+.disabled\:opacity-5:disabled {
+  opacity: 0.05;
+}
+
+.disabled\:opacity-10:disabled {
+  opacity: 0.1;
+}
+
+.disabled\:opacity-20:disabled {
+  opacity: 0.2;
+}
+
+.disabled\:opacity-25:disabled {
+  opacity: 0.25;
+}
+
+.disabled\:opacity-30:disabled {
+  opacity: 0.3;
+}
+
+.disabled\:opacity-40:disabled {
+  opacity: 0.4;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
+
+.disabled\:opacity-60:disabled {
+  opacity: 0.6;
+}
+
+.disabled\:opacity-70:disabled {
+  opacity: 0.7;
+}
+
+.disabled\:opacity-75:disabled {
+  opacity: 0.75;
+}
+
+.disabled\:opacity-80:disabled {
+  opacity: 0.8;
+}
+
+.disabled\:opacity-90:disabled {
+  opacity: 0.9;
+}
+
+.disabled\:opacity-95:disabled {
+  opacity: 0.95;
+}
+
+.disabled\:opacity-100:disabled {
   opacity: 1;
 }
 
@@ -53781,7 +53872,7 @@ select {
   }
 
   .sm\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .sm\:font-serif {
@@ -59671,6 +59762,66 @@ select {
   }
 
   .sm\:focus\:opacity-100:focus {
+    opacity: 1;
+  }
+
+  .sm\:disabled\:opacity-0:disabled {
+    opacity: 0;
+  }
+
+  .sm\:disabled\:opacity-5:disabled {
+    opacity: 0.05;
+  }
+
+  .sm\:disabled\:opacity-10:disabled {
+    opacity: 0.1;
+  }
+
+  .sm\:disabled\:opacity-20:disabled {
+    opacity: 0.2;
+  }
+
+  .sm\:disabled\:opacity-25:disabled {
+    opacity: 0.25;
+  }
+
+  .sm\:disabled\:opacity-30:disabled {
+    opacity: 0.3;
+  }
+
+  .sm\:disabled\:opacity-40:disabled {
+    opacity: 0.4;
+  }
+
+  .sm\:disabled\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+
+  .sm\:disabled\:opacity-60:disabled {
+    opacity: 0.6;
+  }
+
+  .sm\:disabled\:opacity-70:disabled {
+    opacity: 0.7;
+  }
+
+  .sm\:disabled\:opacity-75:disabled {
+    opacity: 0.75;
+  }
+
+  .sm\:disabled\:opacity-80:disabled {
+    opacity: 0.8;
+  }
+
+  .sm\:disabled\:opacity-90:disabled {
+    opacity: 0.9;
+  }
+
+  .sm\:disabled\:opacity-95:disabled {
+    opacity: 0.95;
+  }
+
+  .sm\:disabled\:opacity-100:disabled {
     opacity: 1;
   }
 
@@ -85024,7 +85175,7 @@ select {
   }
 
   .md\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .md\:font-serif {
@@ -90914,6 +91065,66 @@ select {
   }
 
   .md\:focus\:opacity-100:focus {
+    opacity: 1;
+  }
+
+  .md\:disabled\:opacity-0:disabled {
+    opacity: 0;
+  }
+
+  .md\:disabled\:opacity-5:disabled {
+    opacity: 0.05;
+  }
+
+  .md\:disabled\:opacity-10:disabled {
+    opacity: 0.1;
+  }
+
+  .md\:disabled\:opacity-20:disabled {
+    opacity: 0.2;
+  }
+
+  .md\:disabled\:opacity-25:disabled {
+    opacity: 0.25;
+  }
+
+  .md\:disabled\:opacity-30:disabled {
+    opacity: 0.3;
+  }
+
+  .md\:disabled\:opacity-40:disabled {
+    opacity: 0.4;
+  }
+
+  .md\:disabled\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+
+  .md\:disabled\:opacity-60:disabled {
+    opacity: 0.6;
+  }
+
+  .md\:disabled\:opacity-70:disabled {
+    opacity: 0.7;
+  }
+
+  .md\:disabled\:opacity-75:disabled {
+    opacity: 0.75;
+  }
+
+  .md\:disabled\:opacity-80:disabled {
+    opacity: 0.8;
+  }
+
+  .md\:disabled\:opacity-90:disabled {
+    opacity: 0.9;
+  }
+
+  .md\:disabled\:opacity-95:disabled {
+    opacity: 0.95;
+  }
+
+  .md\:disabled\:opacity-100:disabled {
     opacity: 1;
   }
 
@@ -116267,7 +116478,7 @@ select {
   }
 
   .lg\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .lg\:font-serif {
@@ -122157,6 +122368,66 @@ select {
   }
 
   .lg\:focus\:opacity-100:focus {
+    opacity: 1;
+  }
+
+  .lg\:disabled\:opacity-0:disabled {
+    opacity: 0;
+  }
+
+  .lg\:disabled\:opacity-5:disabled {
+    opacity: 0.05;
+  }
+
+  .lg\:disabled\:opacity-10:disabled {
+    opacity: 0.1;
+  }
+
+  .lg\:disabled\:opacity-20:disabled {
+    opacity: 0.2;
+  }
+
+  .lg\:disabled\:opacity-25:disabled {
+    opacity: 0.25;
+  }
+
+  .lg\:disabled\:opacity-30:disabled {
+    opacity: 0.3;
+  }
+
+  .lg\:disabled\:opacity-40:disabled {
+    opacity: 0.4;
+  }
+
+  .lg\:disabled\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+
+  .lg\:disabled\:opacity-60:disabled {
+    opacity: 0.6;
+  }
+
+  .lg\:disabled\:opacity-70:disabled {
+    opacity: 0.7;
+  }
+
+  .lg\:disabled\:opacity-75:disabled {
+    opacity: 0.75;
+  }
+
+  .lg\:disabled\:opacity-80:disabled {
+    opacity: 0.8;
+  }
+
+  .lg\:disabled\:opacity-90:disabled {
+    opacity: 0.9;
+  }
+
+  .lg\:disabled\:opacity-95:disabled {
+    opacity: 0.95;
+  }
+
+  .lg\:disabled\:opacity-100:disabled {
     opacity: 1;
   }
 
@@ -147510,7 +147781,7 @@ select {
   }
 
   .xl\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xl\:font-serif {
@@ -153400,6 +153671,66 @@ select {
   }
 
   .xl\:focus\:opacity-100:focus {
+    opacity: 1;
+  }
+
+  .xl\:disabled\:opacity-0:disabled {
+    opacity: 0;
+  }
+
+  .xl\:disabled\:opacity-5:disabled {
+    opacity: 0.05;
+  }
+
+  .xl\:disabled\:opacity-10:disabled {
+    opacity: 0.1;
+  }
+
+  .xl\:disabled\:opacity-20:disabled {
+    opacity: 0.2;
+  }
+
+  .xl\:disabled\:opacity-25:disabled {
+    opacity: 0.25;
+  }
+
+  .xl\:disabled\:opacity-30:disabled {
+    opacity: 0.3;
+  }
+
+  .xl\:disabled\:opacity-40:disabled {
+    opacity: 0.4;
+  }
+
+  .xl\:disabled\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+
+  .xl\:disabled\:opacity-60:disabled {
+    opacity: 0.6;
+  }
+
+  .xl\:disabled\:opacity-70:disabled {
+    opacity: 0.7;
+  }
+
+  .xl\:disabled\:opacity-75:disabled {
+    opacity: 0.75;
+  }
+
+  .xl\:disabled\:opacity-80:disabled {
+    opacity: 0.8;
+  }
+
+  .xl\:disabled\:opacity-90:disabled {
+    opacity: 0.9;
+  }
+
+  .xl\:disabled\:opacity-95:disabled {
+    opacity: 0.95;
+  }
+
+  .xl\:disabled\:opacity-100:disabled {
     opacity: 1;
   }
 
@@ -178753,7 +179084,7 @@ select {
   }
 
   .\32xl\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .\32xl\:font-serif {
@@ -184646,6 +184977,66 @@ select {
     opacity: 1;
   }
 
+  .\32xl\:disabled\:opacity-0:disabled {
+    opacity: 0;
+  }
+
+  .\32xl\:disabled\:opacity-5:disabled {
+    opacity: 0.05;
+  }
+
+  .\32xl\:disabled\:opacity-10:disabled {
+    opacity: 0.1;
+  }
+
+  .\32xl\:disabled\:opacity-20:disabled {
+    opacity: 0.2;
+  }
+
+  .\32xl\:disabled\:opacity-25:disabled {
+    opacity: 0.25;
+  }
+
+  .\32xl\:disabled\:opacity-30:disabled {
+    opacity: 0.3;
+  }
+
+  .\32xl\:disabled\:opacity-40:disabled {
+    opacity: 0.4;
+  }
+
+  .\32xl\:disabled\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+
+  .\32xl\:disabled\:opacity-60:disabled {
+    opacity: 0.6;
+  }
+
+  .\32xl\:disabled\:opacity-70:disabled {
+    opacity: 0.7;
+  }
+
+  .\32xl\:disabled\:opacity-75:disabled {
+    opacity: 0.75;
+  }
+
+  .\32xl\:disabled\:opacity-80:disabled {
+    opacity: 0.8;
+  }
+
+  .\32xl\:disabled\:opacity-90:disabled {
+    opacity: 0.9;
+  }
+
+  .\32xl\:disabled\:opacity-95:disabled {
+    opacity: 0.95;
+  }
+
+  .\32xl\:disabled\:opacity-100:disabled {
+    opacity: 1;
+  }
+
   .\32xl\:bg-blend-normal {
     background-blend-mode: normal;
   }
@@ -188279,3 +188670,4 @@ select {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
