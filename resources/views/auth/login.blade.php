@@ -4,7 +4,7 @@
 @section('content')
   <div class="max-w-9xl mx-auto bg-white mt-6 py-2">
 
-    <h1 class="text-center text-2xl font-bold tracking-wide py-10">ورود به لوستر شاپ</h1>
+    <h1 class="text-center text-2xl font-bold tracking-wide pt-10 pb-4">ورود به لوستر شاپ</h1>
 
     <form method="POST" action="{{ route('login') }}" class="px-4 my-4 mx-w-md sm:max-w-md mx-auto">
       @csrf
