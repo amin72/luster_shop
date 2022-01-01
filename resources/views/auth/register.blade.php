@@ -15,21 +15,35 @@
         <input
           type="text"
           class="rounded block mt-1 w-full focus:outline-none py-3 border-1"
-          name="nmae"
+          name="name"
           value="{{ old('name') }}"
           required
           autofocus>
+          <div class="mt-2 text-red-600">
+            @error('phone')
+              {{ $message === 'validation.unique' ? 'این شماره تلفن قبلا استفاده شده است.' : '' }}
+              {{ $message === 'validation.min.string' ? 'شماره تلفن باید ۱۱ رقم باشد.' : ''}}
+              {{ $message === 'validation.regex' ? 'شماره تلفن باید ۱۱ رقم باشد.' : ''}}
+            @enderror
+          </div>
       </div>
 
-      <!-- Email Address -->
+      <!-- Phone -->
       <div class="mt-6">
-        <label for="email">ایمیل</label>
+        <label for="phone">تلفن</label>
         <input
-          type="email"
+          type="text"
           class="rounded block mt-1 w-full focus:outline-none py-3 border-1"
-          name="email"
-          value="{{ old('email') }}"
+          name="phone"
+          value="{{ old('phone') }}"
           required>
+          @error('phone')
+            <div class="mt-2 text-red-600">
+              {{ $message === 'The phone has already been taken.' ? 'این شماره تلفن قبلا استفاده شده است.' : '' }}
+              {{ $message === 'validation.min.string' ? 'شماره تلفن باید ۱۱ رقم باشد.' : ''}}
+              {{ $message === 'validation.regex' ? 'شماره تلفن باید ۱۱ رقم باشد.' : ''}}
+            </div>
+          @enderror
       </div>
 
       <!-- Password -->
@@ -41,6 +55,12 @@
           name="password"
           required
           autocomplete="current-password">
+          @error('password')
+            <div class="mt-2 text-red-600">
+              {{ $message === 'validation.min.string' ? 'طول رمز عبور باید ۸ کاراکتر باشد.' : '' }}
+              {{ $message === 'validation.confirmed' ? 'رمزهای عبور یکسان نیستند.' : ''}}
+            </div>
+          @enderror
       </div>
 
       <!-- class="block mt-1 w-full" -->
@@ -53,18 +73,6 @@
           name="password_confirmation"
           required
           autocomplete="current-password">
-      </div>
-
-      <!-- Remember Me -->
-      <div class="mt-6">
-        <label for="remember_me">
-          <input
-            type="checkbox"
-            class="rounded mt-1 focus:outline-none border-0 p-2 border-2 border-indigo-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-            name="remember"
-            autocomplete="current-password">
-            <span class="ml-2 text-sm text-gray-600">مرا به خاطر بسپار</span>
-        </label>
       </div>
 
       <div class="mt-6 flex items-center justify-between">

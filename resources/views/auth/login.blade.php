@@ -9,16 +9,35 @@
     <form method="POST" action="{{ route('login') }}" class="px-4 my-4 mx-w-md sm:max-w-md mx-auto">
       @csrf
 
-      <!-- Email Address -->
+      @error('phone')
+        <div class="mb-4 text-red-600">
+          {{ $message === 'These credentials do not match our records.' ? 'اطلاعات وارد شده صحیح نیستند. لطفا دوباره امتحان کنید.' : '' }}
+        </div>
+      @enderror
+
+      @error('password')
+        <div class="mb-4 text-red-600">
+          {{ $message === 'validation.min.string' ? 'اطلاعات وارد شده صحیح نیستند. لطفا دوباره امتحان کنید.' : '' }}
+        </div>
+      @enderror
+
+
+      <!-- Phone Address -->
       <div>
-        <label for="email">ایمیل</label>
+        <label for="phone">تلفن</label>
         <input
-          type="email"
+          type="tel"
           class="rounded block mt-1 w-full focus:outline-none py-3 border-1"
-          name="email"
-          value="{{ old('email') }}"
+          name="phone"
+          value="{{ old('phone') }}"
           required
           autofocus>
+          @error('phone')
+            <div class="mt-2 text-red-600">
+              {{ $message === 'validation.min.string' ? 'شماره تلفن باید ۱۱ رقم باشد.' : ''}}
+              {{ $message === 'validation.regex' ? 'شماره تلفن باید ۱۱ رقم باشد.' : ''}}
+            </div>
+          @enderror
       </div>
 
       <!-- Password -->
@@ -38,7 +57,8 @@
           <input
             type="checkbox"
             class="rounded mt-1 focus:outline-none border-0 p-2 border-2 border-indigo-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-            name="remember"
+            name="remember_me"
+            id="remember_me"
             autocomplete="current-password">
             <span class="ml-2 text-sm text-gray-600">مرا به خاطر بسپار</span>
         </label>
