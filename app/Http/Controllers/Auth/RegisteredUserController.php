@@ -39,16 +39,27 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $phone = $request->phone;
+        $token = create_token();
+
         $user = User::create([
             'name' => $request->name,
-            'phone' => $request->phone,
+            'phone' => $phone,
             'password' => Hash::make($request->password),
+            'token' => $token,
+            'token_expires_at' => next5Min(),
         ]);
 
         event(new Registered($user));
-
+        // $user->address()->create();
         Auth::login($user);
+        
+        // send token to user
+        sendSMSToken($phone, $token, 'activate_user');
 
-        return redirect(RouteServiceProvider::HOME);
+        // put phone number in session
+        $request->session()->put('phone', $phone);
+        
+        return redirect(route('user_activate'));
     }
 }

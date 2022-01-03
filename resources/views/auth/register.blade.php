@@ -6,7 +6,11 @@
 
     <h1 class="text-center text-2xl font-bold tracking-wide pt-10 pb-4">ثبت نام</h1>
 
-    <form method="POST" action="{{ route('register') }}" class="px-4 my-4 mx-w-md sm:max-w-md mx-auto">
+    <form
+      method="POST"
+      action="{{ route('register') }}"
+      class="px-4 my-4 mx-w-md sm:max-w-md mx-auto">
+
       @csrf
 
       <!-- Name -->
@@ -63,7 +67,6 @@
           @enderror
       </div>
 
-      <!-- class="block mt-1 w-full" -->
       <!-- Confirm Password -->
       <div class="mt-6">
         <label for="password_confirmation">رمز عبور</label>

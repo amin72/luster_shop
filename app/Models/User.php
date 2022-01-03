@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Carbon\Carbon;
+
 
 class User extends Authenticatable
 {
@@ -20,6 +22,8 @@ class User extends Authenticatable
         'name',
         'phone',
         'password',
+        'token',
+        'token_expires_at',
     ];
 
     /**
@@ -40,4 +44,31 @@ class User extends Authenticatable
     protected $casts = [
         'phone_verified_at' => 'datetime',
     ];
+
+
+    // public function address() {
+    //     return $this->hasOne('App\Models\Address');
+    // }
+
+
+    // public function posts() {
+    //     return $this->hasMany('App\Models\Post');
+    // }
+
+
+    // public function shopping_carts() {
+    //     return $this->hasMany('App\Models\ShoppingCart');
+    // }
+
+
+    public function token_expired() {
+        return $this->token_expires_at < Carbon::now();
+    }
+
+    
+    // checks if all required fields are set and user is is ready to purchase
+    // public function is_ready_to_purchase() {
+    //     $adress = $this->address;
+    //     return ($this->name and $adress->province and $adress->city and $adress->detail);
+    // }
 }
