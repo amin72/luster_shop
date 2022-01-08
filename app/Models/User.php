@@ -24,6 +24,8 @@ class User extends Authenticatable
         'password',
         'token',
         'token_expires_at',
+        'is_active',
+        'is_admin',
     ];
 
     /**
@@ -46,19 +48,14 @@ class User extends Authenticatable
     ];
 
 
-    // public function address() {
-    //     return $this->hasOne('App\Models\Address');
-    // }
+    public function address() {
+        return $this->hasOne('App\Models\Address');
+    }
 
 
-    // public function posts() {
-    //     return $this->hasMany('App\Models\Post');
-    // }
-
-
-    // public function shopping_carts() {
-    //     return $this->hasMany('App\Models\ShoppingCart');
-    // }
+    public function shopping_carts() {
+        return $this->hasMany('App\Models\ShoppingCart');
+    }
 
 
     public function token_expired() {
@@ -67,8 +64,8 @@ class User extends Authenticatable
 
     
     // checks if all required fields are set and user is is ready to purchase
-    // public function is_ready_to_purchase() {
-    //     $adress = $this->address;
-    //     return ($this->name and $adress->province and $adress->city and $adress->detail);
-    // }
+    public function is_ready_to_purchase() {
+        $adress = $this->address;
+        return ($this->name and $adress->province and $adress->city and $adress->detail);
+    }
 }

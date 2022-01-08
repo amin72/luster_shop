@@ -44,7 +44,7 @@
             <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">تماس با ما</a>
             <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">درباره ما</a>
             @if ($user = Auth::user())
-              <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">پنل کاربری</a>
+              <a href="{{ route('dashboard.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">پنل کاربری</a>
               <form action="#" method="POST">
                 @csrf
                 <button
@@ -75,7 +75,7 @@
           <div class="flex items-center ml-6">
             @include('svg.user', ['class' => 'h-5 w-5 fill-current text-gray-500 ml-2'])
             @if ($user = Auth::user())
-              <a href="" class="font-semibold text-sm tracking-wide">پنل کاربری</a>
+              <a href="{{ route('dashboard.index') }}" class="font-semibold text-sm tracking-wide">پنل کاربری</a>
               <span class="mx-2 text-gray-500">/</span>
               <form action="{{ route('logout') }}" method="POST">
                 @csrf
@@ -91,7 +91,7 @@
               <a href="{{ route('register') }}" class="font-semibold text-sm tracking-wide">ثبت نام</a>
             @endif
           </div>
-          @include('svg.shopping-card', ['class' => 'h-6 w-6 fill-current text-gray-500'])
+          @include('svg.shopping-cart', ['class' => 'h-6 w-6 fill-current text-gray-500'])
         </div>
       </div>
 

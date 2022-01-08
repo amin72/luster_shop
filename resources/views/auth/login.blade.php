@@ -3,6 +3,7 @@
 
 @section('content')
   <div class="max-w-9xl mx-auto bg-white mt-6 py-2">
+    @include('partials.messages')
 
     <h1 class="text-center text-2xl font-bold tracking-wide pt-10 pb-4">ورود به لوستر شاپ</h1>
 
@@ -81,6 +82,14 @@
         @endif
       </div>
     </form>
+
+    <div>
+      <a
+        href="{{ route('register') }}"
+        class="px-4 my-4 mx-w-md sm:max-w-md mx-auto block mt-8">
+        اگر تا بحال در سایت ثبت نام نکرده اید اینجا کلیک کنید.
+      </a>
+    </div>
   </div>
 @endsection
 

@@ -51,7 +51,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
-        // $user->address()->create();
+        $user->address()->create();
         Auth::login($user);
         
         // send token to user

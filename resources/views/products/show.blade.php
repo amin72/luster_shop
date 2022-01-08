@@ -3,7 +3,7 @@
 
 @section('content')
   <div class="max-w-10xl 2xl:max-w-9xl mx-auto bg-white mt-6 py-2">
-    
+  
     {{-- top image --}}
     <section></section>
 
@@ -63,9 +63,18 @@
               تومان
             </div>
             <div class="py-5 border-b text-left">
-              <form action="" class="flex justify-between">
-                <button class="w-3/4 inline-block flex-shrink-0 px-6 py-3 bg-red-500 text-white text-sm tracking-widest font-semibold rounded-r-lg focus:outline-none">افزودن به سبد خرید</button>
-                <input class="w-1/4 text-center inline-block flex-shrink-0 py-3 px-2 rounded-l-lg focus:outline-none" type="number" name="qunatity" value="1" min="1">
+              <form
+                method="POST"
+                action="{{ route('cart.store') }}"
+                class="flex justify-between">
+                @csrf
+
+                <input type="hidden" name="id" value="{{ $product->id }}">
+                <input type="hidden" name="name" value="{{ $product->name }}">
+                <input type="hidden" name="price" value="{{ $product->price }}">
+
+                <button type="submit" class="w-3/4 inline-block flex-shrink-0 px-6 py-3 bg-red-500 text-white text-sm tracking-widest font-semibold rounded-r-lg focus:outline-none">افزودن به سبد خرید</button>
+                <input class="w-1/4 text-center inline-block flex-shrink-0 py-3 px-2 rounded-l-lg focus:outline-none" type="number" name="quantity" value="1" min="1">
               </form>
             </div>
           </div>
