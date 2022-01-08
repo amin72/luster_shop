@@ -3,6 +3,8 @@
 namespace Backpack\CRUD\app\Console\Commands;
 
 use Illuminate\Console\Command;
+use \App\Models\User;
+use Hash;
 
 class CreateUser extends Command
 {
@@ -13,7 +15,7 @@ class CreateUser extends Command
      */
     protected $signature = 'backpack:user
                             {--N|name= : The name of the new user}
-                            {--E|email= : The user\'s email address}
+                            {--E|phone= : The user\'s phone number}
                             {--P|password= : User\'s password}
                             {--encrypt=true : Encrypt user\'s password if it\'s plain text ( true by default )}';
 
@@ -37,26 +39,25 @@ class CreateUser extends Command
             $name = $this->ask('Name');
         }
 
-        if (! $email = $this->option('email')) {
-            $email = $this->ask('Email');
+        if (! $phone = $this->option('phone')) {
+            $phone = $this->ask('phone');
         }
 
         if (! $password = $this->option('password')) {
             $password = $this->secret('Password');
         }
 
-        if ($this->option('encrypt')) {
-            $password = bcrypt($password);
-        }
+        $user = User::create([
+            'name' => $name,
+            'phone' => $phone,
+            'password' => Hash::make($password),
+            'is_admin' => true,
+            'is_active' => true,
+        ]);
 
-        $auth = config('backpack.base.user_model_fqn', 'App\User');
-        $user = new $auth();
-        $user->name = $name;
-        $user->email = $email;
-        $user->password = $password;
-        $user->is_admin = true;
+        $user->address()->create();
 
-        if ($user->save()) {
+        if ($user) {
             $this->info('Successfully created new user');
         } else {
             $this->error('Something went wrong trying to save your user');
