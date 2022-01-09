@@ -38,11 +38,11 @@
 
           {{-- menu items --}}
           <div id="menu" class="hidden lg:hidden px-2 pt-2 pb-5">
-            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 md:mt-0 hover:bg-gray-200">خانه</a>
-            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">محصولات</a>
-            <a href="#" class="md:hidden tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">سبد خرید</a>
-            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">تماس با ما</a>
-            <a href="#" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">درباره ما</a>
+            <a href="{{ route('pages.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 md:mt-0 hover:bg-gray-200">خانه</a>
+            <a href="{{ route('products.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">محصولات</a>
+            <a href="{{ route('cart.index') }}" class="md:hidden tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">سبد خرید</a>
+            <a href="{{ route('contact.create') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">تماس با ما</a>
+            <a href="{{ route('pages.about') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">درباره ما</a>
             @if ($user = Auth::user())
               <a href="{{ route('dashboard.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">پنل کاربری</a>
               <form action="#" method="POST">
@@ -111,10 +111,10 @@
             </li>
           @endforeach
           <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
-            <a href="#">درباره ما</a>
+            <a href="{{ route('pages.about') }}">درباره ما</a>
           </li>
           <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
-            <a href="#">تماس با ما</a>
+            <a href="{{ route('contact.create') }}">تماس با ما</a>
           </li>
         </ul>
       </div>
@@ -259,10 +259,10 @@
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">برند لوستر شاپ </a>
               </li>
               <li>
-                <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">درباره ما</a>
+                <a href="{{ route('pages.about') }}" class="text-gray-600 text-xs font-semibold tracking-wide">درباره ما</a>
               </li>
               <li>
-                <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">تماس با ما</a>
+                <a href="{{ route('contact.create') }}" class="text-gray-600 text-xs font-semibold tracking-wide">تماس با ما</a>
               </li>
               <li>
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">مسابقه بزرگ جعبه گشایی</a>

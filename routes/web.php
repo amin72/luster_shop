@@ -7,10 +7,18 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ContactController;
 
 
 Route::name('pages.')->group(function () {
     Route::get('/', [PagesController::class, 'index'])->name('index');
+    Route::get('/about', [PagesController::class, 'about'])->name('about');
+});
+
+
+Route::name('contact.')->group(function () {
+    Route::get('/contact', [ContactController::class, 'create'])->name('create');
+    Route::post('/contact', [ContactController::class, 'store'])->name('store');
 });
 
 
