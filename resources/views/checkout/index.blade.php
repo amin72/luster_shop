@@ -61,7 +61,7 @@
     <div class="my-2 font-bold">
       <form action="{{ route('checkout.store') }}" method="POST">
         @csrf
-        <button class="px-4 py-3 text-white bg-red-400 block w-full lg:w-auto rounded-xl font-bold text-lg focus:outline-none">ادامه پرداخت</button>
+        <x-button class="text-base">ادامه پرداخت</x-button>
       </form>
     </div>
 

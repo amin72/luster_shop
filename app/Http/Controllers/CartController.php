@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Page;
+use App\Models\Attribute;
+use App\Models\AttributeProduct;
 use Cart;
 
 
@@ -20,18 +22,28 @@ class CartController extends Controller
         $request->validate([
             'id' => 'required',
             'name' => 'required|string|max:60',
-            'price' => 'required|integer',
             'quantity' => 'required|integer',
         ]);
 
         $product = Product::findOrFail($request->id);
+        $total_price = $product->price;
+        $attribute_products = [];
+
+        foreach ($request->except(['id', '_token', 'name', 'price', 'quantity']) as $name => $value) {
+            $attribute = Attribute::where('name', $name)->get();
+            $attribute_product = AttributeProduct::where('id', $value)->first();
+            if ($attribute_product) {
+                array_push($attribute_products, $attribute_product);
+                $total_price += $attribute_product->price;
+            }
+        }
 
         Cart::add([
             'id' => $request->id,
             'name' => $request->name,
-            'price' => $request->price,
+            'price' => $total_price,
             'quantity' => $request->quantity,
-            'attributes' => [],
+            'attributes' => $attribute_products,
             'associatedModel' => $product
         ]);
     

@@ -15,12 +15,12 @@
         </div>
 
         <div class="flex mt-10 overflow-hidden">
-          <img class="h-16 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
-          <img class="h-16 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
-          <img class="h-16 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
-          <img class="h-16 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
-          <img class="h-16 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
-          <img class="h-16 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+          <img class="h-16 sm:h-24 md:h-28 lg:h-20 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+          <img class="h-16 sm:h-24 md:h-28 lg:h-20 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+          <img class="h-16 sm:h-24 md:h-28 lg:h-20 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+          <img class="h-16 sm:h-24 md:h-28 lg:h-20 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+          <img class="h-16 sm:h-24 md:h-28 lg:h-20 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+          <img class="h-16 sm:h-24 md:h-28 lg:h-20 w-1/6 ml-3 rounded cursor-pointer" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
         </div>
       </div>
 
@@ -50,10 +50,10 @@
 
           <div class="w-full md:w-1/2 xl:w-1/3 flex-shrink-0 bg-gray-100 font-lg px-4 mt-10 md:mt-0">
             <div class="py-5 border-b">
-              فروش توسط: لوستر شاپ
+              فروش توسط: لوستر اکسین
             </div>
             <div class="py-5 border-b">
-              گارانتی ۱۲ ماهه لوستر شاپ
+              گارانتی ۱۲ ماهه لوستر اکسین
             </div>
             <div class="py-5 border-b">
               آماده ارسال از انبار طی 10 روز کاری
@@ -71,7 +71,10 @@
 
                 <input type="hidden" name="id" value="{{ $product->id }}">
                 <input type="hidden" name="name" value="{{ $product->name }}">
-                <input type="hidden" name="price" value="{{ $product->price }}">
+
+                @foreach($product->attributes->groupBy('name') as $group_attribute)
+                  <input type="hidden" name="{{ $group_attribute[0]->name }}" id="{{ $group_attribute[0]->name }}" value="">
+                @endforeach
 
                 <button type="submit" class="w-3/4 inline-block flex-shrink-0 px-6 py-3 bg-red-500 text-white text-sm tracking-widest font-semibold rounded-r-lg focus:outline-none">افزودن به سبد خرید</button>
                 <input class="w-1/4 text-center inline-block flex-shrink-0 py-3 px-2 rounded-l-lg focus:outline-none" type="number" name="quantity" value="1" min="1">
@@ -111,7 +114,6 @@
                 <span class="change_price tracking-widest font-semibold">{{ $product->price }}</span>
                 <span>تومان</span>
               </div>
-              {{-- @include('partials.shop.add_to_cart', ['product' => $product]) --}}
             </div>
           </a>
         @endforeach
@@ -156,19 +158,21 @@
       }
 
       $.ajax({
-          url: `http://127.0.0.1:8000/products/get-price/${slug}`,
+          url: `/products/get-price/${slug}`,
           data: {
             attributes
           },
           type: 'GET',
           dataType: 'json', // added data type
           success: function(res) {
-            console.log(res)
             $('.change_price').html(res)
             $(".change_price").text(function() {
               var element = $(this).eq(0)
               formatElementPrice(element)
             })
+
+            var element = $(`#${ attribute_name }`)[0]
+            element.value = attribute_value_id
           }
       });
   })

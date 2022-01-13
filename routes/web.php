@@ -26,12 +26,6 @@ Route::resource('products', ProductsController::class);
 Route::get('products/get-price/{slug}', [ProductsController::class, 'getPrice']);
 
 
-Route::resource('shop', ShopController::class);
-
-
-Route::resource('checkout', CheckoutController::class);
-
-
 Route::name('checkout.')->group(function() {
     Route::get('checkout', [CheckoutController::class, 'index'])
         ->middleware('user_active')
