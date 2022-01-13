@@ -41,9 +41,6 @@
                     @foreach ($cart->products as $product)
                       <li class="hover:text-gray-500 border-b-2 py-5">
                         <a href="{{ route('products.show', $product->product()->slug) }}">{{ $product->name }}</a>
-                        @if ($product->product()->download_file)
-                          <a class="block text-red-400 mt-2" href="{{ route('shop.download', $product->product()->slug) }}">دانلود محصول</a>
-                        @endif
                       </li>
                     @endforeach
                   </ul>
@@ -54,7 +51,7 @@
         </div>
       @else
         <p class="text-xl">تاریخچه خرید شما خالی است.</p>
-        <a class="block text-red-400 text-lg my-2" href="{{ route('shop.index') }}">مشاهده محصولات</a>
+        <a class="block text-red-400 text-lg my-2" href="{{ route('products.index') }}">مشاهده محصولات</a>
       @endif
     </div>
   </div>

@@ -43,6 +43,8 @@
             <a href="{{ route('cart.index') }}" class="md:hidden tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">سبد خرید</a>
             <a href="{{ route('contact.create') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">تماس با ما</a>
             <a href="{{ route('pages.about') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">درباره ما</a>
+            <a href="{{ route('cart.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">سبد خرید</a>
+            
             @if ($user = Auth::user())
               <a href="{{ route('dashboard.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">پنل کاربری</a>
               <form action="#" method="POST">
@@ -256,7 +258,7 @@
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">دکورمگ</a>
               </li>
               <li>
-                <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">برند لوستر شاپ </a>
+                <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">برند لوستر اکسین </a>
               </li>
               <li>
                 <a href="{{ route('pages.about') }}" class="text-gray-600 text-xs font-semibold tracking-wide">درباره ما</a>
@@ -338,7 +340,7 @@
       <div class="flex flex-col md:flex-row justify-between pt-6 pb-8 max-w-4xl text-gray-800 font-normal">
         <p class="w-full md:w-1/3 px-4 my-4 md:my-0">شنبه تا جمعه، در همه ساعات شبانه روز پاسخگوی شما هستیم.</p>
         <p class="w-full md:w-1/3 px-4 my-4 md:my-0">شماره تماس: ۰۶۱۵-۲۲۲۳۴۵۶</p>
-        <p class="w-full md:w-1/3 px-4 my-4 md:my-0">آدرس ایمیل: info@lustershop.ir</p>
+        <p class="w-full md:w-1/3 px-4 my-4 md:my-0">آدرس ایمیل: info@lusteroxin.ir</p>
       </div>
     </div>
   

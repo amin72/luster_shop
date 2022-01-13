@@ -50,7 +50,6 @@
               <span class="change_price tracking-widest font-semibold">{{ $product->price }}</span>
               <span>تومان</span>
             </div>
-            {{-- @include('partials.shop.add_to_cart', ['product' => $product]) --}}
           </div>
         </a>
       @endforeach
