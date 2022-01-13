@@ -25,7 +25,7 @@ class AttributeProductFactory extends Factory
             'attribute_id' => \App\Models\Attribute::all()->random(),
             'product_id' => \App\Models\Product::all()->random(),
             'value' => $this->faker->word,
-            'price' => $this->faker->numberBetween(10000, 500000)
+            'price' => round($this->faker->numberBetween(10000, 500000) / 10000) * 10000
         ];
     }
 }

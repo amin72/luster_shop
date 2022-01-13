@@ -33,7 +33,7 @@ class ProductFactory extends Factory
             'slug' => $slug,
             'description' => $this->faker->text($maxNbChars=250),
             'details' => $this->faker->paragraph(30),
-            'price' => $this->faker->numberBetween(100000, 10000000),
+            'price' => round($this->faker->numberBetween(100000, 10000000) / 10000) * 10000,
             'stock' => $this->faker->randomDigit,
             'published' => true,
             'image' => 'images/products/sample.jpg',
