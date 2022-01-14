@@ -231,8 +231,8 @@ return [
 
             'mode' => 'sandbox', // can be normal, sandbox, zaringate
             'merchantId' => 'test',
-            'callbackUrl' => 'http://localhost:8000/verify',
-            'description' => 'making payment in luster shop website using zarinpal -- localhost',
+            'callbackUrl' => 'http://127.0.0.1:8000/verify',
+            'description' => 'making payment in lusteroxin.ir website using zarinpal -- localhost',
         ],
         'zibal' => [
             /* normal api */

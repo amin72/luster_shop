@@ -41,8 +41,6 @@ class CheckoutController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    private $tId = '';
-
     public function store(Request $request) {
         if (! Auth::user()->is_ready_to_purchase()) {
             return redirect(route('dashboard.index'))->with('info', 'قبل از ادامه خرید اطلاعات کاربری خود را در قسمت ویرایش مشخصات کامل کنید.');
@@ -60,9 +58,10 @@ class CheckoutController extends Controller
     public function verify(Request $request) {
         try {
             $transactionId = session()->get('transactionId');
+            
             $receipt = Payment::amount((int) Cart::getTotal())
                 ->transactionId($transactionId)->verify();
-
+            
             // You can show payment referenceId to the user.
             // echo $receipt->getReferenceId();
             return redirect(route('checkout.payment_done'));
@@ -78,14 +77,15 @@ class CheckoutController extends Controller
         if (! session()->get('transactionId')) {
             return redirect(route('pages.index'));
         }
-
+        
         // move cart from session to model
         $shopping_cart = ShoppingCart::create([
             'user_id' => Auth::user()->id,
             'total_price' => Cart::getTotal(),
             'purchased' => true
         ]);
-
+        
+        
         foreach (Cart::getContent() as $item) {
             $purchased_product = new PurchasedProduct([
                 'product_id' => $item->id,
@@ -96,14 +96,13 @@ class CheckoutController extends Controller
             $shopping_cart->products()->save($purchased_product);
         }
         $shopping_cart->save();
-
+        
         // TODO:
         // send sms notification to admin
-
-        // clear cart and transactionId
-        Cart::clear();
-        session()->flush('transactionId');
         
+        // clear cart
+        Cart::clear();
+        session()->forget('transactionId');
         return view('checkout.payment_done')->with('cart', $shopping_cart);
     }
 
