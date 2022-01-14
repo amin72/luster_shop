@@ -2,9 +2,10 @@
 
 
 @section('content')
-  <div class="max-w-9xl mx-auto bg-white mt-6 py-2">
+  <div class="max-w-3xl mx-auto bg-white mt-10 py-10 lg:rounded-2xl">
+    @include('partials.messages')
 
-    <h1 class="text-center text-2xl font-bold tracking-wide pt-10 pb-4">ثبت نام</h1>
+    <h1 class="text-center text-2xl font-bold tracking-wide pt-2 pb-4">ثبت نام</h1>
 
     <form
       method="POST"
@@ -52,7 +53,7 @@
 
       <!-- Password -->
       <div class="mt-6">
-        <label for="password">رمز عبور</label>
+        <label for="password">رمز عبور (حداقل باید ۸ کاراکتر باشد)</label>
         <input
           type="password"
           class="rounded block mt-1 w-full focus:outline-none py-3 border-1"
@@ -69,7 +70,7 @@
 
       <!-- Confirm Password -->
       <div class="mt-6">
-        <label for="password_confirmation">رمز عبور</label>
+        <label for="password_confirmation">تکرار رمز عبور</label>
         <input
           type="password"
           class="rounded block mt-1 w-full focus:outline-none py-3 border-1"
@@ -92,9 +93,3 @@
     </form>
   </div>
 @endsection
-
-<!-- Session Status -->
-<!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
-
-<!-- Validation Errors -->
-<!-- <x-auth-validation-errors class="mb-4" :errors="$errors" /> -->

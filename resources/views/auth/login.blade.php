@@ -2,7 +2,7 @@
 
 
 @section('content')
-  <div class="max-w-9xl mx-auto bg-white mt-6 py-2">
+  <div class="max-w-3xl mx-auto bg-white mt-10 py-10 lg:rounded-2xl">
     @include('partials.messages')
 
     <h1 class="text-center text-2xl font-bold tracking-wide pt-10 pb-4">ورود به لوستر اکسین</h1>

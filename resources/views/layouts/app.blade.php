@@ -124,7 +124,7 @@
   </header>
 
   {{-- main content --}}
-  <main class="mx-auto px-4 pb-16">
+  <main class="mx-auto pb-16">
     @yield('content')
   </main>
 
