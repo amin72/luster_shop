@@ -3,23 +3,6 @@
 
 @section('content')
   <div class="max-w-7xl mx-auto">
-    {{-- banner section --}}
-    <section class="px-4 mt-6">
-      <div>
-        <img class="w-full h-10 lg:h-20 rounded-2xl" src="{{ asset('img/0.png') }}" alt="">
-      </div>
-      <div class="mt-4 flex">
-        <div class="lg:ml-4 w-full lg:w-8/12 flex flex-1">
-          <img class="block w-full rounded-2xl" src="{{ asset('img/2.png') }}" alt="">
-        </div>
-        <div class="hidden lg:flex flex-col w-4/12">
-          <img class="mb-4 rounded-2xl" src="{{ asset('img/1.png') }}" alt="">
-          <img class="rounded-2xl" src="{{ asset('img/1.png') }}" alt="">
-        </div>
-      </div>
-    </section>
-  
-  
     {{-- category section --}}
     <section class="mt-10 flex justify-between flex-wrap">
       <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
