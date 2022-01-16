@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ShopComment extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 }

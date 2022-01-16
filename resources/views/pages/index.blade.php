@@ -5,38 +5,17 @@
   <div class="max-w-7xl mx-auto">
     {{-- category section --}}
     <section class="mt-10 flex justify-between flex-wrap">
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">لوستر مدرن</span>
-      </div>
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">آباژور رومیزی</span>
-      </div>
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">مبلمان تختخواب‌شو</span>
-      </div>
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">مبل تک نفره</span>
-      </div>
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">میز</span>
-      </div>
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">چراغ آویز</span>
-      </div>
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">ساعت دیواری</span>
-      </div>
-      <div class="w-1/2 md:w-1/4 xl:w-auto my-4 flex flex-col items-center">
-        <img class="rounded-full h-32 w-32" src="{{ asset('img/3.jpg') }}" alt="">
-        <span class="mt-6 tracking-wide font-semibold text-gray-800 text-sm">لوستر چوبی</span>
-      </div>
+      @foreach (\App\Models\Circle::where(['section' => 1, 'is_active' => true])->take(6)->get() as $circle)
+        <a 
+          href="{{ $circle->link }}"
+          class="rounded-full w-1/2 md:w-1/3 xl:w-auto my-4 flex flex-col items-center">
+          <img
+            class="rounded-full h-32 w-32"
+            src="{{ asset($circle->image) }}"
+            alt="{{ $circle->title }}">
+          <span class="mt-4 tracking-wide font-semibold text-gray-800 text-sm">{{ $circle->title }}</span>
+        </a>
+      @endforeach
     </section>
   
   

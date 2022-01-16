@@ -9,6 +9,7 @@ use Carbon\Carbon;
 
 class PasswordReset extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 
     protected $primaryKey = 'phone';
