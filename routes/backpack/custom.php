@@ -26,4 +26,5 @@ Route::group([
     Route::crud('purchased-product', 'PurchasedProductCrudController');
     Route::crud('shop-comment', 'ShopCommentCrudController');
     Route::crud('shopping-cart', 'ShoppingCartCrudController');
+    Route::crud('top-product', 'TopProductCrudController');
 }); // this should be the absolute last line of this file

@@ -73,16 +73,10 @@ class ProductCrudController extends CrudController
         CRUD::field('image')->type('image');
         CRUD::field('published');
 
-
         CRUD::field('attributes')
             ->label('Attributes')
             ->type('relationship')
-            // ->name('attributes')
-            // ->entity('attribute')
-            // ->attribute('name')
-            // ->model(\App\Models\Attribute::class)
-            // ->pivot(true)
-            ->tab('Relationships')
+             ->tab('Relationships')
             ->inline_create([
                 'entity' => 'attribute', // the entity in singular
                 // OPTIONALS
@@ -93,12 +87,7 @@ class ProductCrudController extends CrudController
                 'include_main_form_fields' => ['field1', 'field2'], // pass certain fields from the main form to the modal
 
             ])
-            ->ajax(true)
-        ;
-
-            // 'model'     => "Backpack\NewsCRUD\app\Models\Tag", // foreign key model
-            // 'pivot'     => true, // on create&update, do you need to add/delete pivot table entries?
-            // 'tab'       => 'Relationships',
+            ->ajax(true);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
