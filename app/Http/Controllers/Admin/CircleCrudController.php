@@ -63,7 +63,14 @@ class CircleCrudController extends CrudController
         CRUD::field('title');
         CRUD::field('link');
         CRUD::field('image')->type('image');
-        CRUD::field('section')->type('number')->default(1);
+        CRUD::field('section')
+            ->type('select_from_array')
+            ->options(
+                [
+                    1 => 'First Position',
+                    2 => 'Second Position',
+                    3 => 'Third Position'
+                ]);
         CRUD::field('is_active')->type('boolean');
 
         /**
