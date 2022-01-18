@@ -1,16 +1,1 @@
-@extends('errors.layout')
-
-@php
-  $error_number = 404;
-@endphp
-
-@section('title')
-  Page not found.
-@endsection
-
-@section('description')
-  @php
-    $default_error_message = "Please <a href='javascript:history.back()''>go back</a> or return to <a href='".url('')."'>our homepage</a>.";
-  @endphp
-  {!! isset($exception)? ($exception->getMessage()?$exception->getMessage():$default_error_message): $default_error_message !!}
-@endsection
+@include('errors.layout', ['title' => 'صفحه یافت نشد', 'header' => 'خطای ۴۰۴', 'message' => 'صفحه مورد نظر شما یافت نشد.'])

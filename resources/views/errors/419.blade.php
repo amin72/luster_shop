@@ -1,0 +1,1 @@
+@include('errors.layout', ['title' => 'صفحه نامعتبر است', 'header' => 'خطای ۴۱۹', 'message' => 'صفحه نامعتبر است.'])
