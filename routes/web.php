@@ -12,7 +12,7 @@ use App\Http\Controllers\ContactController;
 
 Route::name('pages.')->group(function () {
     Route::get('/', [PagesController::class, 'index'])->name('index');
-    Route::get('/about', [PagesController::class, 'about'])->name('about');
+    // Route::get('/about', [PagesController::class, 'about'])->name('about');
 });
 
 
