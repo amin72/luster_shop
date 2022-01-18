@@ -20,5 +20,14 @@ class DatabaseSeeder extends Seeder
         $this->call(CategoryTableSeeder::class);
         \App\Models\Product::factory(50)->create();
         \App\Models\AttributeProduct::factory(500)->create();
+        
+        // Circles
+        $this->call(CircleTableSeeder::class);
+
+        // Top Products
+        $this->call(TopProductTableSeeder::class);
+
+        // Random Products
+        $this->call(RandomProductTableSeeder::class);
     }
 }
