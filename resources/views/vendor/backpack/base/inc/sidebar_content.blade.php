@@ -14,3 +14,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('shop-comment') }}'><i class='nav-icon la la-question'></i> Shop comments</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('shopping-cart') }}'><i class='nav-icon la la-question'></i> Shopping carts</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('top-product') }}'><i class='nav-icon la la-question'></i> Top products</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('random-product') }}'><i class='nav-icon la la-question'></i> Random products</a></li>
