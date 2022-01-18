@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 
+@section('title')
+  {{ $product->name }}
+@endsection
+
+
 @section('content')
   <div class="max-w-10xl 2xl:max-w-9xl mx-auto bg-white mt-6 py-2">
-  
-    {{-- top image --}}
-    <section></section>
-
     <section class="flex flex-col lg:flex-row py-8 px-4 text-gray-800">
       <h1 class="inline-block lg:hidden border-b text-lg pb-3">محصول یک مبل تختخواب شو دو نفره چشمه نور مدل MA-503/140-PUR</h1>
       <div class="lg:w-4/12 flex-shrink-0 lg:pl-4">

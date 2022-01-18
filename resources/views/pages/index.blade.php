@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 
+@section('title')
+  خانه
+@endsection
+
+
 @section('content')
   <div class="max-w-7xl mx-auto">
     {{-- category section --}}
@@ -24,7 +29,7 @@
       {{-- header --}}
       <div class="flex justify-between font-bold text-lg border-b mb-4">
         <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">محبوب ترین محصولات</span>
-        <a href="#" class="py-4 text-gray-500 hover:text-green-800">مشاهده همه</a>
+        <a href="#" class="py-4 text-gray-700 hover:text-green-800">مشاهده همه</a>
       </div>
   
       {{-- products section --}}
@@ -34,8 +39,11 @@
             href="{{ route('products.show', $product->product->slug) }}"
             class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-4">
             <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset($product->product->image) }}" alt="{{ $product->product->name }}">
-            <span class="text-ceter text-gray-500 mx-auto">{{ $product->product->name }}</span>
-            <div class="text-left ml-2 text-gray-500 mt-6">{{ $product->product->price }} تومان</div>
+            <span class="text-ceter text-gray-700 font-semibold mx-auto">{{ $product->product->name }}</span>
+            <div class="text-left ml-2 text-gray-700 mt-6 font-semibold">
+              <span class="change_price px-1 tracking-widest">{{ $product->product->price }}</span>
+              تومان
+            </div>
           </a>
         @endforeach
       </div>
@@ -43,7 +51,7 @@
   
   
     {{-- luster products --}}
-    <section class="rounded-lg bg-white shadow w-full py-4 px-6">
+    <section class="rounded-lg bg-white shadow w-full pb-4 px-6">
       {{-- header --}}
       <div class="flex justify-between font-bold text-lg border-b mb-2">
         <span class="py-4 border-b border-red-500 -my-px text-gray-800 font-semibold tracking-wide">دیگر محصولات</span>
@@ -55,9 +63,15 @@
           <a
             href="{{ route('products.show', $product->product->slug) }}"
             class="w-1/2 md:w-1/3 lg:w-1/6 text-center hover:shadow-xl px-1 sm:px-2 py-8">
-            <img class="mb-4 rounded h-full w-full mx-auto" src="{{ asset($product->product->image) }}" alt="{{ $product->product->name }}">
-            <span class="text-ceter text-gray-500 mx-auto">{{ $product->product->name }}</span>
-            <div class="text-left ml-2 text-gray-500 mt-6">{{ $product->product->price }} تومان</div>
+            <img
+              class="mb-4 rounded h-full w-full mx-auto"
+              src="{{ asset($product->product->image) }}"
+              alt="{{ $product->product->name }}">
+            <span class="text-ceter text-gray-700 font-semibold mx-auto">{{ $product->product->name }}</span>
+            <div class="text-left ml-2 text-gray-700 mt-6 font-semibold">
+              <span class="change_price px-1 tracking-widest">{{ $product->product->price }}</span>
+              تومان
+            </div>
           </a>
         @endforeach
       </div>

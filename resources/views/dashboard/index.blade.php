@@ -2,7 +2,7 @@
 
 
 @section('title')
-  داشبورد
+  پنل کاربری
 @endsection
 
 
@@ -81,16 +81,6 @@
               placeholder="نام"
               class="block w-full px-4 py-2 border border-gray-500 focus:outline-none focus:ring-1 ring-gray-500 rounded-lg"
               value="{{ $user->name }}">
-          </div>
-
-          {{-- email --}}
-          <div class="mt-6 md:mt-0 md:w-1/2 md:pr-4">
-            <input
-              type="email"
-              name="email"
-              placeholder="ایمیل"
-              class="block w-full px-4 py-2 border border-gray-500 focus:outline-none focus:ring-1 ring-gray-500 rounded-lg"
-              value="{{ $user->email }}">
           </div>
         </div>
         

@@ -10,7 +10,7 @@
 <div class="max-w-7xl mx-auto rounded border shadow-xl my-48 px-8 py-20 bg-gray-50">
   {{-- <div class=""> --}}
 
-  <p class="text-center text-lg">پرداخت با موفقیت انجام شد. تاریخچه خرید در بخش <a class="text-red-400" href="{{ route('dashboard.index') }}">داشبورد</a> قابل مشاهده است.</p>
+  <p class="text-center text-lg">پرداخت با موفقیت انجام شد. تاریخچه خرید در بخش <a class="text-red-400" href="{{ route('dashboard.index') }}">پنل کاربری</a> قابل مشاهده است.</p>
   <h2 class="text-center text-lg my-6">محصولات خریداری شده</h2>
   <div class="text-center">
     <ul class="border-4">

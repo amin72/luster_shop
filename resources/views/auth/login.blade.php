@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 
+@section('title')
+  ورود به سایت
+@endsection
+
+
 @section('content')
   <div class="max-w-3xl mx-auto bg-white mt-10 py-10 lg:rounded-2xl">
     @include('partials.messages')

@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 
+@section('title')
+  محصولات
+@endsection
+
+
 @section('content')
   <div class="max-w-10xl 2xl:max-w-9xl mx-auto bg-white mt-6 py-2">
     {{-- sub categories --}}

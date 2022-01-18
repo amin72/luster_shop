@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 
+@section('title')
+  بازیابی رمز عبور
+@endsection
+
+
 @section('content')
   <div class="max-w-9xl mx-auto bg-white mt-6 py-2">
 

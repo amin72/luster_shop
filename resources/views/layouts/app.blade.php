@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>@yield('title')</title>
+    <title>فروشگاه لوستر اکسین | @yield('title')</title>
 </head>
 <body class="font-yekan antialiased bg-gray-100 text-gray-600" dir="rtl">
   {{-- header content --}}
@@ -42,7 +42,6 @@
             <a href="{{ route('products.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">محصولات</a>
             <a href="{{ route('cart.index') }}" class="md:hidden tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">سبد خرید</a>
             <a href="{{ route('contact.create') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">تماس با ما</a>
-            <a href="{{ route('pages.about') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">درباره ما</a>
             <a href="{{ route('cart.index') }}" class="tracking-wide block px-2 py-2 rounded leading-tight font-semibold md:flex-shrink-0 mt-2 md:mt-0 hover:bg-gray-200">سبد خرید</a>
             
             @if ($user = Auth::user())
@@ -112,9 +111,6 @@
               <a href="{{ route('products.index', ['menu' => $menu->slug]) }}">{{ $menu->name }}</a>
             </li>
           @endforeach
-          <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
-            <a href="{{ route('pages.about') }}">درباره ما</a>
-          </li>
           <li class="mx-4 font-semibold hover:text-gray-800 text-sm tracking-wide">
             <a href="{{ route('contact.create') }}">تماس با ما</a>
           </li>
@@ -259,9 +255,6 @@
               </li>
               <li>
                 <a href="#" class="text-gray-600 text-xs font-semibold tracking-wide">برند لوستر اکسین </a>
-              </li>
-              <li>
-                <a href="{{ route('pages.about') }}" class="text-gray-600 text-xs font-semibold tracking-wide">درباره ما</a>
               </li>
               <li>
                 <a href="{{ route('contact.create') }}" class="text-gray-600 text-xs font-semibold tracking-wide">تماس با ما</a>
